@@ -44,6 +44,7 @@ a {
   color: var(--gray);
 }
 
+
 nav#navigation {
   margin-inline: auto;
 
@@ -159,6 +160,10 @@ main .hero {
   background-color: var(--gray-light);
   color: var(--main-blue-dark);
   border: none;
+}
+
+.card:hover {
+  opacity: 0.7;
 }
 
 .btn-more {
