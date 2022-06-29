@@ -1,7 +1,4 @@
-on:
-  push:
-    branches:
-      - main
+on: push:
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -15,8 +12,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.upti_ftp_server }}
+          protocol: ftps
+          port: 22
           username: ${{ secrets.upti_ftp_username }}
           password: ${{ secrets.upti_ftp_password }}
-          protocol: ftps-legacy
-          port: 22
-          server-dir: public_html/
