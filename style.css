@@ -1,11 +1,5 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 :root {
-  --main-blue: hsl(217, 100%, 50%);
+  --main-blue: #0062ff;
   --main-blue-dark: #203860;
   --gray: #1f1a1a;
   --gray-light: hsl(0, 0%, 95%);
@@ -31,11 +25,17 @@ body {
 h1 {
   font-size: 4.8rem;
   color: var(--main-blue-dark);
+  line-height: 150%;
 }
 
 h2 {
   font-size: 2.9rem;
   font-weight: 400;
+  line-height: 150%;
+}
+
+p {
+  line-height: 150%;
 }
 
 a {
@@ -43,36 +43,39 @@ a {
   color: var(--gray);
 }
 
-ul {
-  list-style: none;
-}
-
 nav#navigation {
   margin-inline: auto;
 
   align-items: center;
-  height: 16.7rem;
+  height: 14.4rem;
 
   padding-block: 1.2rem;
+  
 }
 
 nav#navigation .header {
-  display: flex;
+  display: flex; 
   justify-content: space-between;
   align-items: center;
 }
 
-nav#navigation .header .social-links ul {
+nav#navigation .contact ul {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: .5rem;
+}
+
+nav#navigation .logo {
+  width: 60px;
+  height: 60px;
 }
 
 nav#navigation .menu {
-  padding-top: 1.7rem;
-  border-top: 1px solid var(--gray-light);
+  padding-block: 2.4rem;
+  
 }
 
-nav#navigation .menu ul:nth-child(1) {
+nav#navigation .menu ul {
   font-size: 1.6rem;
 
   display: flex;
@@ -80,16 +83,16 @@ nav#navigation .menu ul:nth-child(1) {
   justify-content: space-between;
 }
 
-.button {
+.btn-suporte {
   padding: 1rem 2rem;
   border: none;
-  border-radius: 0.5rem;
+  
   background-color: var(--main-blue);
 
   color: white;
 }
 
-.button:hover {
+.btn-suporte:hover {
   background-color: var(--main-blue-dark);
 }
 
@@ -107,27 +110,37 @@ main .hero {
   flex-direction: column;
   justify-content: center;
 
-  width: 70%;
+  width: 60%;
 
   height: 50vh;
 }
 
 #stats {
   margin-inline: 5rem;
+  background-color: var(--main-blue);
+  color: white;
 }
 
 #stats .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
-  gap: 1rem;
-
-  padding-block: 1rem;
+  
+  gap: 3rem;
+  padding-bottom: 6rem;
 }
 
-#stats .card h2 {
+#stats .container .header h2 {
+  font-weight: 700;
+  padding-block: 3rem;
+  color: white;
+}
+
+#stats .container .card h2 {
   font-size: 7.2rem;
   font-weight: 700;
+  padding: 0;
+  color: var(--main-blue);
 }
 
 #stats .card {
@@ -136,12 +149,34 @@ main .hero {
   justify-content: center;
   height: 25vh;
   background-color: var(--gray-light);
+  color: var(--main-blue-dark);
   border: none;
+
 }
 
 #stats .card:hover {
-  background-color: var(--main-blue);
-  color: white;
+  transform: scale(1.1);
+
+}
+
+footer {
+  background-color: var(--gray-light);
+  padding-block: 6rem;
+  margin-inline: 5rem;
+
+  font-size: 1.4rem;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  justify-content: space-between;
+}
+
+footer .container ul {
+  display: flex;
+  flex-direction: column;
+  line-height: 250%;
 }
 
 @media only screen and (max-width: 1920px) {
