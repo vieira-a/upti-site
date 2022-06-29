@@ -14,7 +14,9 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftp.up-ti.com
-          username: up-ti3
-          password: _uptiConfFtp2022
+          server: ${{ secrets.upti_ftp_host }}
+          username: ${{ secrets.upti_ftp_username }}
+          password: ${{ secrets.upti_ftp_password }}
+          protocol: ftps
+          port: 22
           server-dir: public_html/
